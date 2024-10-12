@@ -8,45 +8,45 @@
       "title": "ScriptCraft"
     },
     "Hero": {
-      "title": "终极剧本创作工作平台",
-      "description": "逐场景打造您的故事。使用我们直观的工具和协作功能，提升您的剧本创作过程。",
+      "title": "蛋仔世界创作平台",
+      "description": "欢迎来到蛋仔世界，一个每个蛋都有故事的地方。在这里，你将开启一段奇妙的旅程，与你的蛋仔一起成长，探索未知的世界。让我们一起孵化梦想，编织属于你们的故事吧！",
       "cta": "开始使用"
     },
     "Features": {
       "title": "主要功能",
       "characterProfile": {
-        "title": "角色档案生成器",
-        "description": "轻松创建详细的角色档案。"
+        "title": "蛋仔档案生成器",
+        "description": "编写传奇蛋仔档案。"
       },
       "storyStructure": {
         "title": "故事结构",
-        "description": "使用强大的结构工具组织您的故事。"
+        "description": "蛋仔游记故事。"
       },
       "sceneEditor": {
         "title": "场景编辑器",
-        "description": "精准编辑和完善您的场景。"
+        "description": "精准编辑和完善游记场景。"
       },
       "aiTools": {
-        "title": "AI辅助工具",
-        "description": "利用AI驱动的建议提升您的写作。"
+        "title": "蛋仔陪聊",
+        "description": "在这里，每个NPC都有他们自己的故事等待你去探索。准备好深入每个角落，与这些多彩的角色对话，揭开他们背后的秘密了吗？让我们一起踏上这段发现之旅！"
       }
     },
     "Testimonials": {
       "title": "用户评价",
       "testimonial1": {
-        "name": "Sarah Johnson",
-        "role": "编剧",
-        "content": "ScriptCraft彻底改变了我的写作过程。角色档案生成器简直是一个革命性的工具！"
+        "name": "小黑",
+        "role": "一坤年蛋友",
+        "content": "咸鱼加扑，力量倍增！"
       },
       "testimonial2": {
-        "name": "Michael Lee",
-        "role": "电影导演",
-        "content": "ScriptCraft的场景编辑器让我能轻松可视化和完善每一个故事瞬间。"
+        "name": "风之低语",
+        "role": "玩蛋专业户",
+        "content": "地雷引爆，传送球出击！"
       },
       "testimonial3": {
-        "name": "Emily Rodriguez",
-        "role": "电视制片人",
-        "content": "AI辅助工具帮助我无数次克服了写作障碍。强烈推荐！"
+        "name": "Boomerang Ball",
+        "role": "歪果仁",
+        "content": "鹌鹑蛋求保护。"
       }
     },
     "Header": {
@@ -74,7 +74,7 @@
       "copyright": "© 2023 ScriptCraft。保留所有权利。"
     },
     "ProductShowcase": {
-      "title": "场景by场景，精心打造您的故事",
+      "title": "赋予你的蛋仔一个传奇故事。",
       "imageAlt": "ScriptCraft界面"
     }
   },
