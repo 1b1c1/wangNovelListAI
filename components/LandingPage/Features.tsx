@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";  
 import { MessageSquare, FileText, Play, Monitor } from "lucide-react";
 
 interface FeatureItem {
@@ -13,6 +13,7 @@ interface FeatureItem {
 
 const Features: React.FC = () => {
   const t = useTranslations('LandingPage.Features');
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const featureData: FeatureItem[] = [
     {
@@ -46,16 +47,35 @@ const Features: React.FC = () => {
       <h2 className="text-4xl font-bold text-center mb-12">{t('title')}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {featureData.map((feature, index) => (
-          <Card key={index} className="bg-white">
+          <Card 
+            key={index} 
+            className="bg-white overflow-hidden"
+          >
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-xl">
                 {feature.icon}
                 {t(feature.titleKey)}
               </CardTitle>
             </CardHeader>
-            <CardContent>
-              <p className="text-gray-600 mb-4">{t(feature.descriptionKey)}</p>
-              <div className="relative w-full h-48">
+            <CardContent className="relative">
+              <p 
+                className={`text-gray-600 mb-4 line-clamp-1 ${index === 3 ? 'cursor-pointer' : ''}`}
+                onMouseEnter={() => index === 3 && setExpandedIndex(3)}
+                onMouseLeave={() => setExpandedIndex(null)}
+              >
+                {t(feature.descriptionKey)}
+              </p>
+              {index === 3 && expandedIndex === 3 && (
+                <div className="absolute top-0 left-0 right-0 bg-white p-2 rounded-md shadow-md z-10">
+                  <p className="text-gray-600 mb-4">{t(feature.descriptionKey)}</p>
+                  <div className="mt-2 space-y-2">
+                    <p className="text-sm text-gray-600">NPC 1: 有什么我可以帮助你的吗？</p>
+                    <p className="text-sm text-gray-600">NPC 2: 欢迎来到我们的世界！</p>
+                    <p className="text-sm text-gray-600">NPC 3: 你想听一个有趣的故事吗？</p>
+                  </div>
+                </div>
+              )}
+              <div className="mt-4 h-48 relative">
                 <Image
                   src={feature.imageSrc}
                   alt={t(feature.titleKey)}
